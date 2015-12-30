@@ -1,0 +1,51 @@
+\documentclass[upright, contnum]{umemoria}
+\depto{DEPARTAMENTO DE CIENCIAS DE LA COMPUTACIÓN}
+\author{ALFREDO JAIME CADIZ RODRÍGUEZ}
+\title{DESDE LA WEB A LOS MÓVILES: LLEVANDO U-CURSOS A NUESTROS BOLSILLOS}
+\auspicio{.}
+\date{ENERO 2014}
+\guia{JAVIER BUSTOS JIMÉNEZ}
+\carrera{INGENIERO CIVIL EN COMPUTACIÓN}
+\memoria{MEMORIA PARA OPTAR AL TÍTULO DE}
+\comision{JOHAN FABRY}{PATRICIO INOSTROZA FAJARDIN}{\ }
+
+\usepackage{lipsum}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\begin{abstract}
+\lipsum[1-4]
+\end{abstract}
+
+\begin{dedicatoria}
+Una dedicatoria corta.
+\end{dedicatoria}
+
+\begin{thanks}
+\lipsum[1-2]
+\end{thanks}
+
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
+\listoftables
+\cleardoublepage
+\listoffigures
+
+\mainmatter
+
+\input{intro.tex}
+\input{cap1.tex}
+\input{cap2.tex}
+\input{conclu.tex}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{bibliografia}
+\end{document}
