@@ -1,14 +1,8 @@
-Clase umemoria v1.3 - Manual de Instrucciones
+# Clase umemoria v1.3 - Manual de Instrucciones
+
 21-06-2012
 
-+Contenidos del archivador
--- umemoria.cls: Archivo fuente de la clase.
--- escudou.pdf: Escudo de la Universidad en formato vectorizado.
--- ejemplo.tex: Fuente LaTeX de ejemplo para el uso de la clase.
--- readme.txt: Este archivo.
--- changelog.txt: Registro de cambios entre versiones.
-
-+Requisitos
+## Requisitos
 El requisito principal para instalar esta clase es, por supuesto, una distribución de LaTeX funcionando.
 En Windows se recomienda MiKTeX 2.8 o superior y TeXLive 2009 o superior en Linux u OS X. Dado que esta es la
 configuración recomendada, las instrucciones siguientes estarán centradas en estas distribuciones. De todas formas,
@@ -29,33 +23,33 @@ Esta clase se encuentra en fase de desarrollo, así que estos requisitos podrían 
 realizando el máximo esfuerzo posible para tener el mínimo de dependencias, de forma que esta clase
 pueda ser utilizada en un ambiente minimal.
 
-+Instalación
+## Instalación
 La instalación de la clase depende del sistema operativo y la distribución de LaTeX en uso.
 
-++ Windows/MiKTeX 2.8 o superior
+-- Windows/MiKTeX 2.8 o superior
 Basta con los archivos umemoria.cls y escudou.pdf a la carpeta %MiKTeX%\tex\latex\base y ejecutar el comando
 	initexmf --update-fndb
 en la línea de comandos. Como alternativa a este último paso, se puede ir al menú Inicio y bajo el apartado
 de MiKTeX iniciar el programa "Settings", y hacer click en el botón "Refresh FNDB".
 
-++ Linux/TeXLive 2009 o superior
+-- Linux/TeXLive 2009 o superior
 Es necesarior copiar los archivos umemoria.cls y escudou.pdf al directorio $TEXLIVE/texmf-local/tex/latex/base y ejecutar
 el comando
 	maketexlsr
 
-++ Alternativa
+-- Alternativa
 Otra alternativa es copiar los archivos umemoria.cls y escudou.pdf a la misma carpeta donde se encuentra el archivo fuente
 de LaTeX con el cual se desea usar la clase, aunque este método es poco recomendable puesto que no permite usar
 facilmente la clase con múltiples fuentes (en diferentes carpetas).
 
-+Modo de Uso
+## Modo de Uso
 Debido a que esta clase se encuentra en formato "class", basta con incluir la línea
 	\documentclass[<opciones>]{umemoria}
 en el preámbulo del documento.
 
 Las opciones de la clase y los comandos disponibles son detallados a continuación.
 
-++ Opciones
+### Opciones
 La clase umemoria cuenta con variadas opciones. En primer lugar, cabe notar que se heredan todas las opciones de la clase
 book, por lo que opciones como twoside, fleqn, leqno, etc. se encuentran disponibles. Además, se agregan las siguientes:
 
@@ -70,7 +64,7 @@ book, por lo que opciones como twoside, fleqn, leqno, etc. se encuentran disponi
 
 Se pasan por defecto las opciones 12pt y openany.
 
-++ Comandos
+### Comandos
 La clase provee los siguientes comandos, proporcionados para definir parámetros necesarios para la generación de la portada,
 etc.
 
@@ -85,7 +79,7 @@ etc.
 
 Todos los comandos convierten sus argumentos a mayúsuclas, a excepción del último.
 
-++ Entornos
+### Entornos
 Se definen además entornos que ayudan a dar un formateo adecuado a cada parte de la memoria, además de ayudar a mantener una coherencia semántica en el código.
 
   -- \begin{abstract} \end{abstract}: Delimita la sección de Resumen de la memoria.
@@ -94,7 +88,7 @@ Se definen además entornos que ayudan a dar un formateo adecuado a cada parte de
   -- \begin{intro} \end{intro}: Introducción. Es un capítulo no numerado, que se agrega al índice.
   -- \begin{conclusion} \end{conclusion}: Conclusion. Es un capítulo no numerado, que se agrega al índice.
 
-++++ Entornos matemáticos
+#### Entornos matemáticos
 Además, se definen entornos 'matemáticos' que permiten agergar teoremas, definiciónes, etc. de manera ordenada y coherente con el estilo del texto. Estos entornos son
 
     -- defn: Definicion.
@@ -119,19 +113,19 @@ Sin embargo, el comportamiento anterior puede modificarse con la opción nocontnu
 	Teorema 1.2. ...
 	Teorema 2.1. ...
 
-++ Otros Comandos
+### Otros Comandos
 Por último, existen comandos de letras en modo matemático. Cada letra mayúscula del abecedario tiene un comando asociado, el que imprimirá una letra en una fuente
 diferente (que depende de la letra). La fuente en que una letra se imprime ha sido elegida de forma arbitraria, intentando rescatar las que se usan
 con mayor frecuencia. Si se desea modificar la letra que imprime un comando basta con redefinirlo mediante
 	\renewcommand{\<letra>}{<comando>}
 
-+ Créditos y contacto
+## Créditos y contacto
 
 Esta clase fue inicialmente desarrollada y mantenida por Nikolas Tapia M., alumno memorista del Departamento de Ingeniería Matemática de la Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile.
 Luego ha sido mantenido por ADI - Área de Infotecnologías - FCFM
 
 
-** CHANGELOG
+## Changelog
 
 21-06-2012
 
