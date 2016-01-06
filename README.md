@@ -125,6 +125,10 @@ Luego ha sido mantenido por ADI - Área de Infotecnologías - FCFM
 
 ## Changelog
 
+[06-01-2015]
+- Limpieza del código
+- Movido a github del ADI
+
 [21-06-2012] v1.3
 - Se saca el package inputenc y fontenc de la definción de la clase, delegando la decisión al usuario.
 - Corregidos problemas de formato con la numeración en el \frontmatter
