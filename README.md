@@ -46,6 +46,17 @@ Debido a que esta clase se encuentra en formato "class", basta con incluir la l�
 
 Las opciones de la clase y los comandos disponibles son detallados a continuación.
 
+### Doble titulación
+Los dobles títulos no están directamente soportados. Por ahora se puede solucionar haciendo lo siguiente:
+1. Comenta el tag de carrera con %
+2. En \memoria pone las 2 memorias separadas de un \newline
+
+Debería quedar algo así
+```
+%\carrera{Nombre de la carrera}
+\memoria{Tesis para Optar al Grado de Magister en ... \newline Memoria para optar al Grado e Ingeniero Civil ...}
+```
+
 ### Opciones
 La clase umemoria cuenta con variadas opciones. En primer lugar, cabe notar que se heredan todas las opciones de la clase
 book, por lo que opciones como twoside, fleqn, leqno, etc. se encuentran disponibles. Además, se agregan las siguientes:
@@ -116,17 +127,6 @@ Sin embargo, el comportamiento anterior puede modificarse con la opción nocontn
 Por último, existen comandos de letras en modo matemático. Cada letra mayúscula del abecedario tiene un comando asociado, el que imprimirá una letra en una fuente
 diferente (que depende de la letra). La fuente en que una letra se imprime ha sido elegida de forma arbitraria, intentando rescatar las que se usan
 con mayor frecuencia. Si se desea modificar la letra que imprime un comando basta con redefinirlo mediante ```\renewcommand{\<letra>}{<comando>}```
-
-## Doble titulación
-Los dobles títulos no están directamente soportados. Por ahora se puede solucionar haciendo lo siguiente:
-1. Comenta el tag de carrera con %
-2. En \memoria pone las 2 memorias separadas de un \newline
-
-Debería quedar algo así
-```
-%\carrera{Nombre de la carrera}
-\memoria{Tesis para Optar al Grado de Magister en ... \newline Memoria para optar al Grado e Ingeniero Civil ...}
-```
 
 ## Créditos
 
