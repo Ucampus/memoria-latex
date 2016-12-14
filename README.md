@@ -135,6 +135,10 @@ Esta clase fue inicialmente desarrollada y mantenida por Nikolas Tapia M., alumn
 Luego ha sido mantenido por ADI - Área de Infotecnologías - FCFM y desde 2016 por el Centro Tecnológico Ucampus - FCFM.
 
 ## Changelog
+[02-12-2016]
+- Actualizamos escudo de la Universidad de Chile con aporte de @mmattamala
+- Incluímos pequeños arreglos solicitados por alumnos
+
 [06-01-2015]
 - Limpieza del código
 - Movido a github del ADI
