@@ -48,8 +48,9 @@ Las opciones de la clase y los comandos disponibles son detallados a continuaci�
 
 ### Doble titulación
 Los dobles títulos no están directamente soportados. Por ahora se puede solucionar haciendo lo siguiente:
-1. Comenta el tag de carrera con %
-2. En \memoria pone las 2 memorias separadas de un \newline
+
+1. Comentar el tag de carrera con %
+2. En \memoria poner las 2 tipos de documento separados de un \newline
 
 Debería quedar algo así
 ```
