@@ -135,6 +135,9 @@ Esta clase fue inicialmente desarrollada y mantenida por Nikolas Tapia M., alumn
 Luego ha sido mantenido por ADI - Área de Infotecnologías - FCFM y desde 2016 por el Centro Tecnológico Ucampus - FCFM.
 
 ## Changelog
+[16-12-2016]
+- Sacamos el 'SR.' de la viñeta superior del resumen #igualdad
+
 [02-12-2016]
 - Actualizamos escudo de la Universidad de Chile con aporte de @mmattamala
 - Incluímos pequeños arreglos solicitados por alumnos
