@@ -157,7 +157,7 @@ PROF. GUÍA: SR. \MakeUppercase\@guia \\
 			\MakeUppercase\@title
 
 		\vspace{1cm}
-			\MakeUppercase\@memoria \space \MakeUppercase\@carrera
+			\MakeUppercase\@memoria
 
 		\vspace{1cm}
 			\MakeUppercase\@author
