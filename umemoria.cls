@@ -123,6 +123,16 @@ PROF. GUÍA: \MakeUppercase\@guia \\
 \let\guia\setguia
 \let\setguia\relax
 
+\global\let\@segundoguia\@empty
+\newcommand{\setsegundoguia}[1]{\def\@segundoguia{#1}}
+\let\segundoguia\setsegundoguia
+\let\setsegundoguia\relax
+
+\global\let\@coguia\@empty
+\newcommand{\setcoguia}[1]{\def\@coguia{#1}}
+\let\coguia\setcoguia
+\let\setcoguia\relax
+
 \global\let\@depto\@empty
 \newcommand{\setdepto}[1]{\def\@depto{#1}}
 \let\depto\setdepto
@@ -164,6 +174,12 @@ PROF. GUÍA: \MakeUppercase\@guia \\
 
 		\vspace{3cm}
 			PROFESOR GUÍA:\\ \MakeUppercase\@guia
+			\if\@segundoguia\@empty\else
+			\\PROFESOR GUÍA 2:\\ \MakeUppercase\@segundoguia
+			\fi
+			\if\@segundoguia\@empty\else
+			\\PROFESOR CO-GUÍA:\\ \MakeUppercase\@coguia
+			\fi
 
 		\vspace{1cm}
 			MIEMBROS DE LA COMISIÓN:\\ \MakeUppercase\@comisa\\\MakeUppercase\@comisb\\\MakeUppercase\@comisc
