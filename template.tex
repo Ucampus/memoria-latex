@@ -1,4 +1,11 @@
 \documentclass[upright, contnum]{umemoria}
+
+%fix for the oneside argument
+\makeatletter
+\g@addto@macro\titlepage{\pagenumbering{Alph}}
+\g@addto@macro\endtitlepage{\pagenumbering{roman}}
+\makeatother
+
 \depto{{$departamento}}
 \author{{$nombre_alumno}}
 \title{{$titulo_memoria}}
