@@ -120,10 +120,13 @@ con mayor frecuencia. Si se desea modificar la letra que imprime un comando bast
 ## Créditos
 
 Esta clase fue inicialmente desarrollada y mantenida por Nikolas Tapia M., alumno memorista del Departamento de Ingeniería Matemática de la Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile.
-Luego ha sido mantenido por ADI - Área de Infotecnologías - FCFM
+Luego fue mantenido por ADI - Área de Infotecnologías y actualmente por el Centro Tecnológico Ucampus.
 
 
 ## Changelog
+[10-04-2016]
+- Se aceptan N-profesores guía
+- Fix nombre "Tabla de Contenido"
 
 [06-01-2015]
 - Limpieza del código
