@@ -46,18 +46,6 @@ Debido a que esta clase se encuentra en formato "class", basta con incluir la l�
 
 Las opciones de la clase y los comandos disponibles son detallados a continuación.
 
-### Doble titulación
-Los dobles títulos no están directamente soportados. Por ahora se puede solucionar haciendo lo siguiente:
-
-1. Comentar el tag de carrera con %
-2. En \memoria poner las 2 tipos de documento separados de un \newline
-
-Debería quedar algo así
-```
-%\carrera{Nombre de la carrera}
-\memoria{Tesis para Optar al Grado de Magister en ... \newline Memoria para optar al Grado e Ingeniero Civil ...}
-```
-
 ### Opciones
 La clase umemoria cuenta con variadas opciones. En primer lugar, cabe notar que se heredan todas las opciones de la clase
 book, por lo que opciones como twoside, fleqn, leqno, etc. se encuentran disponibles. Además, se agregan las siguientes:
@@ -132,15 +120,10 @@ con mayor frecuencia. Si se desea modificar la letra que imprime un comando bast
 ## Créditos
 
 Esta clase fue inicialmente desarrollada y mantenida por Nikolas Tapia M., alumno memorista del Departamento de Ingeniería Matemática de la Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile.
-Luego ha sido mantenido por ADI - Área de Infotecnologías - FCFM y desde 2016 por el Centro Tecnológico Ucampus - FCFM.
+Luego ha sido mantenido por ADI - Área de Infotecnologías - FCFM
+
 
 ## Changelog
-[16-12-2016]
-- Sacamos el 'SR.' de la viñeta superior del resumen #igualdad
-
-[02-12-2016]
-- Actualizamos escudo de la Universidad de Chile con aporte de @mmattamala
-- Incluímos pequeños arreglos solicitados por alumnos
 
 [06-01-2015]
 - Limpieza del código

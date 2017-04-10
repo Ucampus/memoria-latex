@@ -4,7 +4,6 @@
 %%%%%%%%	Primer Autor: Nikolas Tapia M.
 %%%%%%%%	Version: 1.5
 %%%%%%%%	Fecha: 21-06-2012
-%%%%%%%%	Actualización: 11-06-2015
 %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}[2009/09/24]
@@ -38,6 +37,7 @@
 \RequirePackage[spanish, es-nolists, es-lcroman]{babel} % Lenguaje
 \RequirePackage[pdfpagelabels]{hyperref} % Links y numeracion del PDF
 \RequirePackage{listings} % Codigo Fuente
+\RequirePackage{pgffor} % foreach
 
 %% Lenguaje
 \addto\captionsspanish{\renewcommand\tablename{Tabla}}
@@ -68,7 +68,7 @@ RESUMEN DE LA MEMORIA PARA OPTAR \\
 AL TÍTULO DE \MakeUppercase\@carrera \\
 POR: \MakeUppercase\@author \\
 FECHA: \MakeUppercase\@date\\
-PROF. GUÍA: \MakeUppercase\@guia \\
+PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 \end{tabular}
 \end{flushright}
 \begin{center}
@@ -128,14 +128,10 @@ PROF. GUÍA: \MakeUppercase\@guia \\
 \let\depto\setdepto
 \let\setdepto\relax
 
-\global\let\@comisa\@empty
-\global\let\@comisb\@empty
-\global\let\@comisc\@empty
-\newcommand{\comision}[3]{
-	\def\@comisa{#1}
-	\def\@comisb{#2}
-	\def\@comisc{#3}
-}
+\global\let\@comision\@empty
+\newcommand{\setcomision}[1]{\def\@comision{#1}}
+\let\comision\setcomision
+\let\setcomision\relax
 
 \global\let\@auspicio\@empty
 \newcommand{\setauspicio}[1]{\def\@auspicio{#1}}
@@ -149,7 +145,7 @@ PROF. GUÍA: \MakeUppercase\@guia \\
 			\includegraphics[scale=.12]{imagenes/escudoU2014.pdf}
 		\end{minipage}
 		\begin{minipage}[t]{12cm}
-			UNIVERSIDAD DE CHILE\\FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS\\\MakeUppercase\@depto
+			UNIVERSIDAD DE CHILE\\FACULTAD DE CIENCIAS FíSICAS Y MATEMÁTICAS\\\MakeUppercase\@depto
 		\end{minipage}
 
 		\vspace{2cm}
@@ -163,12 +159,15 @@ PROF. GUÍA: \MakeUppercase\@guia \\
 			\MakeUppercase\@author
 
 		\vspace{3cm}
-			PROFESOR GUÍA:\\ \MakeUppercase\@guia
+			\foreach \x [count=\xi] in \@guia {
+				PROFESOR GUÍA\ifnum\xi>1 \ \xi \fi:\\ \MakeUppercase\x\\
+			}
 
 		\vspace{1cm}
-			MIEMBROS DE LA COMISIÓN:\\ \MakeUppercase\@comisa\\\MakeUppercase\@comisb\\\MakeUppercase\@comisc
-		\if\@auspicio\@empty\else
+			MIEMBROS DE LA COMISIÓN:\\
+			\foreach \x in \@comision { \MakeUppercase\x\\ }
 
+		\if\@auspicio\@empty\else
 		\vfill
 			\normalfont
 			Este trabajo ha sido parcialmente financiado por \@auspicio
