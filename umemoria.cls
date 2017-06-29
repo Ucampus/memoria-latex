@@ -145,7 +145,7 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 			\includegraphics[scale=.12]{imagenes/escudoU2014.pdf}
 		\end{minipage}
 		\begin{minipage}[t]{12cm}
-			UNIVERSIDAD DE CHILE\\FACULTAD DE CIENCIAS FíSICAS Y MATEMÁTICAS\\\MakeUppercase\@depto
+			UNIVERSIDAD DE CHILE\\FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS\\\MakeUppercase\@depto
 		\end{minipage}
 
 		\vspace{2cm}
