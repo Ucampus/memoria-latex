@@ -51,9 +51,7 @@
 \fi
 
 %% Interlineado
-\RequirePackage{parskip}
-\setlength{\parskip}{1em}
-\setlength{\parindent}{15pt}
+\setlength{\parskip}{2ex} %interlineado doble
 
 %% Renovar enumerate e itemize
 \let\oldenum\enumerate
@@ -64,6 +62,7 @@
 \renewenvironment{itemize}{\olditem\setlength{\parskip}{\smallskipamount}}{\oldenditem}
 
 %% Entornos nuevos
+%% TODO: Podría ser mejor usar minipage en vez de tabular
 \newenvironment{abstract}{%
 \cleardoublepage
 \begin{flushright}
