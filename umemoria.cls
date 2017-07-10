@@ -12,14 +12,17 @@
 %% Definicion de Condicionales
 \newif\if@swapnum
 \newif\if@contnum
+\newif\if@spanish
 \@swapnumfalse
 \@contnumtrue
+\@spanishtrue
 
 %% Declaracion de Opciones
 \DeclareOption{leftnum}{\@swapnumtrue}
 \DeclareOption{rightnum}{\@swapnumfalse}
 \DeclareOption{contnum}{\@contnumtrue}
 \DeclareOption{nocontnum}{\@contnumfalse}
+\DeclareOption{nospanish}{\@spanishfalse}
 \DeclareOption{uprightd}{\AtEndOfPackage{\DeclareMathSymbol{d}{\mathalpha}{operators}{`d}}}
 \DeclareOption{uprighte}{\AtEndOfPackage{\DeclareMathSymbol{e}{\mathalpha}{operators}{`e}}}
 \DeclareOption{uprighti}{\AtEndOfPackage{\DeclareMathSymbol{i}{\mathalpha}{operators}{`i}}}
@@ -34,16 +37,18 @@
 \RequirePackage[utf8]{inputenc} %Encoding
 \RequirePackage[top=2cm, left=3cm, bottom=2cm, right=2cm, paper=letterpaper]{geometry} % Margenes
 \RequirePackage{amsmath, amssymb, amsthm, graphicx} % Varios
-\RequirePackage[spanish, es-nolists, es-lcroman]{babel} % Lenguaje
 \RequirePackage[pdfpagelabels]{hyperref} % Links y numeracion del PDF
 \RequirePackage{listings} % Codigo Fuente
 \RequirePackage{pgffor} % foreach
 
 %% Lenguaje
+\if@spanish
+\RequirePackage[spanish, es-nolists, es-lcroman]{babel}
 \addto\captionsspanish{\renewcommand\tablename{Tabla}}
 \addto\captionsspanish{\renewcommand\contentsname{Tabla de Contenido}}
 \addto\captionsspanish{\renewcommand\listtablename{Índice de Tablas}}
 \addto\captionsspanish{\renewcommand\listfigurename{Índice de Ilustraciones}}
+\fi
 
 %% Interlineado
 \RequirePackage{parskip}
