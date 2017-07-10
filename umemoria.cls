@@ -34,7 +34,6 @@
 \LoadClass[12pt, openany]{book}
 
 %% Packages necesarios
-\RequirePackage[utf8]{inputenc} %Encoding
 \RequirePackage[top=2cm, left=3cm, bottom=2cm, right=2cm, paper=letterpaper]{geometry} % Margenes
 \RequirePackage{amsmath, amssymb, amsthm, graphicx} % Varios
 \RequirePackage[pdfpagelabels]{hyperref} % Links y numeracion del PDF
@@ -46,8 +45,8 @@
 \RequirePackage[spanish, es-nolists, es-lcroman]{babel}
 \addto\captionsspanish{\renewcommand\tablename{Tabla}}
 \addto\captionsspanish{\renewcommand\contentsname{Tabla de Contenido}}
-\addto\captionsspanish{\renewcommand\listtablename{Índice de Tablas}}
-\addto\captionsspanish{\renewcommand\listfigurename{Índice de Ilustraciones}}
+\addto\captionsspanish{\renewcommand\listtablename{\'Indice de Tablas}}
+\addto\captionsspanish{\renewcommand\listfigurename{\'Indice de Ilustraciones}}
 \fi
 
 %% Interlineado
@@ -69,10 +68,10 @@
 \small
 \begin{tabular}{l}
 RESUMEN DE LA MEMORIA PARA OPTAR \\
-AL TÍTULO DE \MakeUppercase\@carrera \\
+AL T\'ITULO DE \MakeUppercase\@carrera \\
 POR: \MakeUppercase\@author \\
 FECHA: \MakeUppercase\@date\\
-PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
+PROF. GU\'IA: \foreach \x in \@guia { \MakeUppercase\x }
 \end{tabular}
 \end{flushright}
 \begin{center}
@@ -83,8 +82,8 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 \newenvironment{dedicatoria}{\cleardoublepage\null\vspace{\stretch{1}}\begin{flushright}\itshape}{\end{flushright}\vspace{\stretch{2}}\null}
 \let\thanks\undefined
 \newenvironment{thanks}{\cleardoublepage\chapter*{Agradecimientos}}{\vfill\null}
-\newenvironment{intro}{\addcontentsline{toc}{chapter}{\protect\numberline{}Introducción}\chapter*{Introducción}}{\vfill\null}
-\newenvironment{conclusion}{\addcontentsline{toc}{chapter}{\protect\numberline{}Conclusión}\chapter*{Conclusión}}{\vfill\null}
+\newenvironment{intro}{\addcontentsline{toc}{chapter}{\protect\numberline{}Introducci\'on}\chapter*{Introducci\'on}}{\vfill\null}
+\newenvironment{conclusion}{\addcontentsline{toc}{chapter}{\protect\numberline{}Conclusi\'on}\chapter*{Conclusi\'on}}{\vfill\null}
 
 %% Teoremas, proofs, etc
 \renewenvironment{proof}[1][\proofname] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\scshape\footnotesize#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse}
@@ -95,21 +94,21 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 	\swapnumbers
 \fi
 \theoremstyle{miestilo}
-\newtheorem{defn}{Definición}[chapter]
+\newtheorem{defn}{Definici\'on}[chapter]
 \if@contnum
 \newtheorem{teo}[defn]{Teorema}
 \newtheorem{cor}[defn]{Corolario}
 \newtheorem{lema}[defn]{Lema}
-\newtheorem{prop}[defn]{Proposición}
+\newtheorem{prop}[defn]{Proposici\'on}
 \else
 \newtheorem{teo}{Teorema}[chapter]
 \newtheorem{cor}{Corolario}[chapter]
 \newtheorem{lema}{Lema}[chapter]
-\newtheorem{prop}{Proposición}[chapter]
+\newtheorem{prop}{Proposici\'on}[chapter]
 \fi
 \theoremstyle{miobs}
 \newtheorem*{ej}{Ejemplo}
-\newtheorem*{obs}{Observación}
+\newtheorem*{obs}{Observaci\'on}
 
 %% Comandos para la portada
 \global\let\@carrera\@empty
@@ -149,7 +148,7 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 			\includegraphics[scale=.12]{imagenes/escudoU2014.pdf}
 		\end{minipage}
 		\begin{minipage}[t]{12cm}
-			UNIVERSIDAD DE CHILE\\FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS\\\MakeUppercase\@depto
+			UNIVERSIDAD DE CHILE\\FACULTAD DE CIENCIAS F\'ISICAS Y MATEM\'ATICAS\\\MakeUppercase\@depto
 		\end{minipage}
 
 		\vspace{2cm}
@@ -164,11 +163,11 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 
 		\vspace{3cm}
 			\foreach \x [count=\xi] in \@guia {
-				PROFESOR GUÍA\ifnum\xi>1 \ \xi \fi:\\ \MakeUppercase\x\\
+				PROFESOR GU\'IA\ifnum\xi>1 \ \xi \fi:\\ \MakeUppercase\x\\
 			}
 
 		\vspace{1cm}
-			MIEMBROS DE LA COMISIÓN:\\
+			MIEMBROS DE LA COMISI\'ON:\\
 			\foreach \x in \@comision { \MakeUppercase\x\\ }
 
 		\if\@auspicio\@empty\else
