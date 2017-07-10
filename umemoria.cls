@@ -47,6 +47,8 @@
 \addto\captionsspanish{\renewcommand\contentsname{Tabla de Contenido}}
 \addto\captionsspanish{\renewcommand\listtablename{\'Indice de Tablas}}
 \addto\captionsspanish{\renewcommand\listfigurename{\'Indice de Ilustraciones}}
+%% Agregar la bibliografía al índice
+\addcontentsline{toc}{chapter}{Bibliograf\'ia}
 \fi
 
 %% Interlineado
@@ -110,6 +112,8 @@ PROF. GU\'IA: \foreach \x in \@guia { \MakeUppercase\x }
 \newtheorem*{ej}{Ejemplo}
 \newtheorem*{obs}{Observaci\'on}
 
+%% TODO: Manejar todos los casos que aparecen en la
+%%       pauta para la normalización de tesis.
 %% Comandos para la portada
 \global\let\@carrera\@empty
 \newcommand{\setcarrera}[1]{\def\@carrera{#1}}
