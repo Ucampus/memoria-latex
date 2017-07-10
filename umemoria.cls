@@ -49,7 +49,11 @@
 \addto\captionsspanish{\renewcommand\listtablename{\'Indice de Tablas}}
 \addto\captionsspanish{\renewcommand\listfigurename{\'Indice de Ilustraciones}}
 %% Agregar la bibliografía al índice
-\addcontentsline{toc}{chapter}{Bibliograf\'ia}
+\let\oldbib\bibliography
+\renewcommand{\bibliography}[1]{%
+  \oldbib{#1}%
+  \addcontentsline{toc}{chapter}{Bibliograf\'ia}%
+}
 \fi
 
 %% Interlineado
