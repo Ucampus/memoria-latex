@@ -61,19 +61,7 @@
 %% Entornos nuevos
 \newenvironment{abstract}{%
 \cleardoublepage
-\begin{flushright}
-\small
-\begin{tabular}{l}
-RESUMEN DE LA MEMORIA PARA OPTAR \\
-AL TÍTULO DE \MakeUppercase\@carrera \\
-POR: \MakeUppercase\@author \\
-FECHA: \MakeUppercase\@date\\
-PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
-\end{tabular}
-\end{flushright}
-\begin{center}
-\MakeUppercase\@title
-\end{center}
+\chapter*{Resumen}
 }{\vfill\null}
 
 \newenvironment{dedicatoria}{\cleardoublepage\null\vspace{\stretch{1}}\begin{flushright}\itshape}{\end{flushright}\vspace{\stretch{2}}\null}
