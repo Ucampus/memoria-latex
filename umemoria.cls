@@ -64,7 +64,6 @@
 \renewenvironment{itemize}{\olditem\setlength{\parskip}{\smallskipamount}}{\oldenditem}
 
 %% Entornos nuevos
-%% TODO: Podría ser mejor usar minipage en vez de tabular
 \newenvironment{abstract}{%
 \cleardoublepage
 \begin{flushright}
@@ -113,8 +112,6 @@ PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
 \newtheorem*{ej}{Ejemplo}
 \newtheorem*{obs}{Observación}
 
-%% TODO: Manejar todos los casos que aparecen en la
-%%       pauta para la normalización de tesis.
 %% Comandos para la portada
 \global\let\@carrera\@empty
 \newcommand{\setcarrera}[1]{\def\@carrera{#1}}
