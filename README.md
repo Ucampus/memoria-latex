@@ -16,6 +16,7 @@ instalados los siguientes packages:
 * graphicx
 * babel
 * hyperref
+* parskip
 
 Para instrucciones de como instalar estos packages en su distribución, por favor consulte el manual de la misma.
 Esta clase se encuentra en fase de desarrollo, así que estos requisitos podrían variar a futuro. Se está
@@ -57,7 +58,6 @@ book, por lo que opciones como twoside, fleqn, leqno, etc. se encuentran disponi
 * uprighte: Transforma todas las letras 'e' en modo matemático a fuente normal, no cursiva.
 * uprighti: Transforma todas las letras 'i' en modo matemático a fuente normal, no cursiva.
 * upright: Activa las tres opciones anteriores.
-* nospanish: Habilita la clase para escribir tesis en idiomas distintos del español (usar con precaución)
 
 Se pasan por defecto las opciones 12pt y openany. Las opciones upright están desactivadas por defecto.
 
@@ -112,6 +112,11 @@ Sin embargo, el comportamiento anterior puede modificarse con la opción nocontn
 	Teorema 1.2. ...
 	Teorema 2.1. ...
 
+### Otros Comandos
+Por último, existen comandos de letras en modo matemático. Cada letra mayúscula del abecedario tiene un comando asociado, el que imprimirá una letra en una fuente
+diferente (que depende de la letra). La fuente en que una letra se imprime ha sido elegida de forma arbitraria, intentando rescatar las que se usan
+con mayor frecuencia. Si se desea modificar la letra que imprime un comando basta con redefinirlo mediante ```\renewcommand{\<letra>}{<comando>}```
+
 ## Créditos
 
 Esta clase fue inicialmente desarrollada y mantenida por Nikolas Tapia M., alumno memorista del Departamento de Ingeniería Matemática de la Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile.
@@ -120,9 +125,6 @@ Luego fue mantenido por ADI - Área de Infotecnologías y actualmente por el Cen
 
 ## Changelog
 [10-07-2017]
-- Eleminados comandos innecesarios
-- Independencia de encoding
-- Opción para deshabilitar el español (cuidado)
 - Upright desactivado por defecto
 
 [10-04-2016]
