@@ -2,12 +2,13 @@
 %%%%%%%%
 %%%%%%%%	Clase U-Memoria
 %%%%%%%%	Primer Autor: Nikolas Tapia M.
+%%%%%%%%  Contacto: ntapia@dim.uchile.cl
 %%%%%%%%	Version: 1.5
-%%%%%%%%	Fecha: 21-06-2012
+%%%%%%%%	Fecha: 10-07-2017
 %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}[2009/09/24]
-\ProvidesClass{umemoria}[2012/06/18 v1.2 Clase LaTeX para estandarizacion de Memorias U. de Chile]
+\ProvidesClass{umemoria}[2017/07/10 v1.5 Clase LaTeX para estandarizacion de Memorias U. de Chile]
 
 %% Definicion de Condicionales
 \newif\if@swapnum
@@ -42,13 +43,17 @@
 %% Lenguaje
 \addto\captionsspanish{\renewcommand\tablename{Tabla}}
 \addto\captionsspanish{\renewcommand\contentsname{Tabla de Contenido}}
+%% Agregar la bibliografía al índice
+\let\oldbib\bibliography
+\renewcommand{\bibliography}[1]{%
+  \oldbib{#1}%
+  \addcontentsline{toc}{chapter}{Bibliograf\'ia}%
+}
 \addto\captionsspanish{\renewcommand\listtablename{Índice de Tablas}}
 \addto\captionsspanish{\renewcommand\listfigurename{Índice de Ilustraciones}}
 
 %% Interlineado
-\RequirePackage{parskip}
-\setlength{\parskip}{1em}
-\setlength{\parindent}{15pt}
+\setlength{\parskip}{2ex} %interlineado doble
 
 %% Renovar enumerate e itemize
 \let\oldenum\enumerate

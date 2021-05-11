@@ -13,7 +13,7 @@ sed -i -e 's/{{$comision}}/{Profesor1,Profesor2,Profesor3}/g' template_test.tex
 sed -i -e 's/{$resumen}/Este es el abstract/g' template_test.tex
 rm template_test.tex-e
 
-pdflatex template_test
+latexmk -pv -pdf template_test
 
 rm template_test.aux
 rm template_test.lof
@@ -21,7 +21,3 @@ rm template_test.log
 rm template_test.lot
 rm template_test.toc
 rm template_test.out
-
-if [ "$(uname)" == "Darwin" ]; then
-	open template_test.pdf
-fi

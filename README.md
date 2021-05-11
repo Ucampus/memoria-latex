@@ -1,6 +1,6 @@
-# Clase umemoria v1.3 - Manual de Instrucciones
+# Clase umemoria v1.5 - Manual de Instrucciones
 
-21-06-2012
+10-07-2017
 
 ## Requisitos
 El requisito principal para instalar esta clase es, por supuesto, una distribución de LaTeX funcionando.
@@ -59,7 +59,7 @@ book, por lo que opciones como twoside, fleqn, leqno, etc. se encuentran disponi
 * uprighti: Transforma todas las letras 'i' en modo matemático a fuente normal, no cursiva.
 * upright: Activa las tres opciones anteriores.
 
-Se pasan por defecto las opciones 12pt y openany.
+Se pasan por defecto las opciones 12pt y openany. Las opciones upright están desactivadas por defecto.
 
 ### Comandos
 La clase provee los siguientes comandos, proporcionados para definir parámetros necesarios para la generación de la portada,
@@ -124,6 +124,9 @@ Luego fue mantenido por ADI - Área de Infotecnologías y actualmente por el Cen
 
 
 ## Changelog
+[11-05-2021]
+- Upright desactivado por defecto
+
 [24-09-2018]
 - Bugfix: La comisión se separa con comas, corrijo esta documentación
 - Texmaker reclama por imagen fcfm sin extensión y por la falta de natwidth/natheight
