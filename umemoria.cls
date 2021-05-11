@@ -47,7 +47,7 @@
 \let\oldbib\bibliography
 \renewcommand{\bibliography}[1]{%
   \oldbib{#1}%
-  \addcontentsline{toc}{chapter}{Bibliograf\'ia}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{}Bibliograf\'ia}%
 }
 \addto\captionsspanish{\renewcommand\listtablename{Índice de Tablas}}
 \addto\captionsspanish{\renewcommand\listfigurename{Índice de Ilustraciones}}
