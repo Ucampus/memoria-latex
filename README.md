@@ -71,7 +71,7 @@ etc.
 * \carrera{texto}: Nombre de la carrera.
 * \guia{texto}: Nombre del profesor guía.
 * \depto{texto}: Departamento al que pertenece el autor.
-* \comision{texto1}{texto2}{texto3}: Nombres de los integrantes de la comisión evaluadora. Se pueden omitir argumentos.
+* \comision{profe1, profe2, profeN}: Nombres de los integrantes de la comisión evaluadora. Se pueden omitir argumentos.
 * \auspicio{texto}: Indica qué institucion u otro texto incluir en el anuncio de auspicio. En caso de ser omitido el comando, no se muestra la línea.
 
 Todos los comandos convierten sus argumentos a mayúsuclas, a excepción del último.
@@ -124,8 +124,12 @@ Luego fue mantenido por ADI - Área de Infotecnologías y actualmente por el Cen
 
 
 ## Changelog
-[10-07-2017]
+[11-05-2021]
 - Upright desactivado por defecto
+
+[24-09-2018]
+- Bugfix: La comisión se separa con comas, corrijo esta documentación
+- Texmaker reclama por imagen fcfm sin extensión y por la falta de natwidth/natheight
 
 [10-04-2016]
 - Se aceptan N-profesores guía

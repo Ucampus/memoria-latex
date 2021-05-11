@@ -66,26 +66,20 @@
 %% Entornos nuevos
 \newenvironment{abstract}{%
 \cleardoublepage
-\begin{flushright}
-\small
-\begin{tabular}{l}
-RESUMEN DE LA MEMORIA PARA OPTAR \\
-AL TÍTULO DE \MakeUppercase\@carrera \\
-POR: \MakeUppercase\@author \\
-FECHA: \MakeUppercase\@date\\
-PROF. GUÍA: \foreach \x in \@guia { \MakeUppercase\x }
-\end{tabular}
-\end{flushright}
-\begin{center}
-\MakeUppercase\@title
-\end{center}
+\chapter*{Resumen}
 }{\vfill\null}
 
 \newenvironment{dedicatoria}{\cleardoublepage\null\vspace{\stretch{1}}\begin{flushright}\itshape}{\end{flushright}\vspace{\stretch{2}}\null}
 \let\thanks\undefined
 \newenvironment{thanks}{\cleardoublepage\chapter*{Agradecimientos}}{\vfill\null}
-\newenvironment{intro}{\addcontentsline{toc}{chapter}{\protect\numberline{}Introducción}\chapter*{Introducción}}{\vfill\null}
-\newenvironment{conclusion}{\addcontentsline{toc}{chapter}{\protect\numberline{}Conclusión}\chapter*{Conclusión}}{\vfill\null}
+\newenvironment{intro}{
+  \chapter*{Introducción}
+  \addcontentsline{toc}{chapter}{\protect\numberline{}Introducción}
+}{\vfill\null}
+\newenvironment{conclusion}{
+  \chapter*{Conclusión}
+  \addcontentsline{toc}{chapter}{\protect\numberline{}Conclusión}
+}{\vfill\null}
 
 %% Teoremas, proofs, etc
 \renewenvironment{proof}[1][\proofname] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\scshape\footnotesize#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse}
