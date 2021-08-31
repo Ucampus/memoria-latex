@@ -6,15 +6,17 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Mover archivos
-        run: |
-          mv umemoria.cls ~/texmf/tex/latex/local/
-          mv escudou.pdf ~/texmf/tex/latex/local/
-          maketexlsr
+#      - name: Mover archivos
+#        run: |
+#          mv umemoria.cls ~/texmf/tex/latex/local/
+#          mv escudou.pdf ~/texmf/tex/latex/local/
+#          maketexlsr
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: memoria.tex
+        env:
+          TEXINPUTS: ".:./:"
       # src: https://github.community/t/possible-to-commit-files-after-workflow-runs/17824/2
       - name: move to dir # Move the generated files into output folder
         run: |
