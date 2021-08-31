@@ -18,10 +18,6 @@ jobs:
         env:
           TEXINPUTS: ".:./:"
       # src: https://github.community/t/possible-to-commit-files-after-workflow-runs/17824/2
-      - name: move to dir # Move the generated files into output folder
-        run: |
-          mkdir -p output
-          yes| cp -rf memoria.pdf ./
       - name: Commit files # commit the output folder
         run: |
           git config --local user.email "diego.irarrazaval@ug.uchile.cl"
