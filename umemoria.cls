@@ -32,7 +32,7 @@
 \LoadClass[12pt, openany]{book}
 
 %% Packages necesarios
-\RequirePackage[latin1]{inputenc} %Encoding
+\RequirePackage[utf8]{inputenc} %Encoding
 \RequirePackage[top=2cm, left=3cm, bottom=2cm, right=2cm, paper=letterpaper]{geometry} % Margenes
 \RequirePackage{amsmath, amssymb, amsthm, graphicx} % Varios
 \RequirePackage[spanish, es-nolists, es-lcroman]{babel} % Lenguaje
